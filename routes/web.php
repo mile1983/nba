@@ -11,5 +11,9 @@
 |
 */
 
-Route::get('/',['as' =>'all-teams', 'uses'=> 'TeamsContoller@index']);
+Route::get('/',['as' =>'all-teams', 'uses'=> 'TeamsController@index']);
+
+Route::get('/teams/{id}',['as' =>'single-team', 'uses'=> 'TeamsController@show']);
+
+Route::get('/players/{id}',['as' =>'single-player', 'uses'=> 'PlayersController@show']);
 

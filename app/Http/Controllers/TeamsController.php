@@ -3,14 +3,14 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Team
+use \App\Team;
 
 class TeamsController extends Controller
 {
          public function index()
         {
-            $teams = Post::Team();
-            return view('teams.index',compact(['posts']));
+            $teams = Team::all();
+            return view('welcome',compact(['teams']));
         }
     
     
@@ -20,9 +20,9 @@ class TeamsController extends Controller
         {   
     
     
-            $post = Post::with('comments')->find($id);
+            $team = Team::find($id);
             
-            return view('posts.show',compact(['post']));
+            return view('team',compact(['team']));
         
         
         
