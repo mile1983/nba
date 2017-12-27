@@ -1,4 +1,8 @@
 <?php
+use \App\Http\Controllers\TeamsController;
+use \App\Http\Controllers\PlayersController;
+use \App\Http\Controllers\RegisterController;
+use \App\Http\Controllers\LoginController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,7 +17,18 @@
 
 Route::get('/',['as' =>'all-teams', 'uses'=> 'TeamsController@index']);
 
+
+
+Route::get('/register','RegisterController@create');
+
+Route::post('/register','RegisterController@store');
+
+Route::get('/logout','LoginController@destroy');
+
+Route::get('/login','LoginController@create');
+
+Route::post('/login','LoginController@store');
+
 Route::get('/teams/{id}',['as' =>'single-team', 'uses'=> 'TeamsController@show']);
 
 Route::get('/players/{id}',['as' =>'single-player', 'uses'=> 'PlayersController@show']);
-

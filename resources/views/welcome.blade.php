@@ -10,7 +10,6 @@
     </head>
     <body>
 
-        <h1>AAAAAAAAAAAAAAAAAAAAAA</h1>
 
         <h1>Teams</h1>
         <ul>

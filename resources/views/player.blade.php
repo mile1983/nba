@@ -11,8 +11,11 @@
     <body>
             <h1>
                 {{$player->first_name}}
+                <br>
                 {{$player->last_name}}
+                <br>
                 {{$player->email}}
+                <br>
                 {{$player->team->name}}
                 
                 
