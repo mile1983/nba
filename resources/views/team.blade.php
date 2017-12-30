@@ -19,8 +19,7 @@
                     @foreach($team->players as $player)
                     <li>
                    <a href ='{{route("single-player",["id"=>$player->id])}}'>
-                    {{$player->first_name}}
-                    {{$player->last_name}}
+                    {{$player->name}}
                     
                      </a> 
                     </li>
@@ -28,6 +27,42 @@
                     @endforeach
                 </ul>
 
+                <ul>
+                    @foreach($team->comments as $comment)
+                    <li>
+                   
+                    {{$comment->content}}
+                    
+                    
+                    </li>
+           
+                    @endforeach
+                </ul>
+
+
+                <h4>Post a comment</h4>
+
+                <form method="POST" action="{{ route('comments-post', ['team_id' => $team->id]) }}">
+            
+                    {{ csrf_field() }}
+            
+                    <div class="form-group">
+                        <label for="author">Your name:</label>
+                        <input type="text" class="form-control" id="id" name="name"/>
+                        
+                    </div>
+            
+                    <div class="form-group">
+                        <label for="text">Comment:</label>
+                        <textarea class="form-control" id="text" name="text"></textarea>
+                    </div>
+            
+                    <div class="form-group">
+                        <button type="submit" class="btn btn-primary">Submit</button>
+                    </div>
+            
+                </form>
+            
 
 
 
