@@ -34,9 +34,9 @@ class RegisterController extends Controller
 
             $user ->save();
 
-            auth()->login($user);
+            // auth()->login($user);
 
-            return redirect('/');
+            return redirect('/login');
             
             
             

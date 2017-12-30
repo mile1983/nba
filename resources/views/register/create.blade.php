@@ -1,5 +1,4 @@
-{{--  @extends('layouts.master')  --}}
-{{--  @section('content')  --}}
+
     <h2>Register user</h2>
     <hr>
     <form method="POST" action="/register">
@@ -35,4 +34,4 @@
             </div>
         @endforeach
     @endif
-{{--  @endsection  --}}
+  

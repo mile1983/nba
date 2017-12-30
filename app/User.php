@@ -6,7 +6,14 @@ use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 
 class User extends Authenticatable
-{
+{ 
+    
+    
+    public function __construct()
+    {
+        // $this->middleware('guest');
+        // $this->middleware('register')->only('store');
+    }
     use Notifiable;
 
     /**
